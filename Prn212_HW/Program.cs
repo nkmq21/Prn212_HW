@@ -15,7 +15,7 @@ namespace Prn212_HW
             /*
             negro.Program.FileAnalyzer(new string[] { "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Prn212_HW\\HW\\cow.txt "});
         */
-            Prn212_HW.LambdaLearning.Nigga();
+            Prn212_HW.LambdaLearning.Lambda();
         }
     }
 
