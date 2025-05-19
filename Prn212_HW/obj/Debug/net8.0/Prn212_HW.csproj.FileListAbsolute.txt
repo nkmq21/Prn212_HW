@@ -1,0 +1,17 @@
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Prn212_HW.exe
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Prn212_HW.deps.json
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Prn212_HW.runtimeconfig.json
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Prn212_HW.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Prn212_HW.pdb
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.AssemblyInfoInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.AssemblyInfo.cs
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.csproj.CoreCompileInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\refint\Prn212_HW.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.pdb
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.genruntimeconfig.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\ref\Prn212_HW.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.csproj.AssemblyReference.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.csproj.Up2Date
