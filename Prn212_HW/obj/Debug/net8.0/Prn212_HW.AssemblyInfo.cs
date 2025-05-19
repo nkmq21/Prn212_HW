@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prn212_HW")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+177af83a6ef03c2a8fd8d38969cd5f9baad1cdd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prn212_HW")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prn212_HW")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
