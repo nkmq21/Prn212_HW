@@ -2,7 +2,7 @@
 
 public class LambdaLearning
 {
-    public static void Nigga()
+    public static void Lambda()
     {
         int[] arr = [21, 234, 2134, 632, 123, 6432, 742];
         Print((x) => x > 400, arr);
