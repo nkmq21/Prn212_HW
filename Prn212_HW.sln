@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prn212_HW", "Prn212_HW\Prn212_HW.csproj", "{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibaryManagementSystem", "LibaryManagementSystem\LibaryManagementSystem.csproj", "{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -7,9 +7,9 @@ namespace Prn212_HW
 {
     class Program
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
-        }
+        }*/
     }
 
     
