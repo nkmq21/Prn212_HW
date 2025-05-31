@@ -15,3 +15,4 @@ C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\ref\Prn212_HW
 C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.csproj.AssemblyReference.cache
 C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.csproj.Up2Date
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Prn212_HW\obj\Debug\net8.0\Prn212_HW.sourcelink.json

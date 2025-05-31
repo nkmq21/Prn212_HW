@@ -1,4 +1,7 @@
-﻿namespace LibraryManagementSystem
+﻿using System.Collections;
+using System.Diagnostics;
+
+namespace LibraryManagementSystem
 {
     // ======== BASIC ASSIGNMENT ========
 
@@ -233,11 +236,11 @@
 
     public class Library
     {
-        public List<LibraryItem> list = new List<LibraryItem>();
+        public List<LibraryItem> List = new List<LibraryItem>();
 
         public void AddItem(LibraryItem item)
         {
-            list.Add(item);
+            List.Add(item);
         }
 
         public LibraryItem SearchByTitle(string title)
@@ -245,23 +248,56 @@
             //return the first element that satisfies the condition or the default value if nothing is found
             //the default value in this case is null
             //null is catched later in the main method
-            return list.FirstOrDefault(item => item.Title.Contains(title, StringComparison.OrdinalIgnoreCase));
+            return List.FirstOrDefault(item => item.Title.Contains(title,
+                       StringComparison.OrdinalIgnoreCase)) ??
+                   throw new InvalidOperationException();
         }
 
         public void DisplayAllItems()
         {
             Console.WriteLine("============ LIBRARY INVENTORY ============");
-            if (list.Count == 0)
+            if (List.Count == 0)
             {
                 Console.WriteLine("THERE ARE NOTHING IN THE LIBRARY");
                 return;
             }
 
-            foreach (var items in list)
+            foreach (var items in List)
             {
                 items.DisplayInfo();
                 Console.WriteLine("---------------------------------------");
             }
+        }
+
+        // TODO (ADVANCED): Add ref parameter and ref return methods to the Library class
+        // - UpdateItemTitle method using ref parameter
+        // - GetItemReference method with ref return
+
+        public bool UpdateItemTitle(int id, ref string title)
+        {
+            LibraryItem item = List.FirstOrDefault(item => item.Id == id.ToString());
+            if (item != null)
+            {
+                item.Title = title;
+                return true;
+            }
+
+            return false;
+        }
+
+
+        public ref LibraryItem GetItemReference(int id)
+        {
+            for (int i = 0; i < List.Count; i++)
+            {
+                // Check if we found the item with the matching ID
+                if (List[i].Id == id.ToString())
+                {
+                    // Get a reference to the item at index i
+                    return ref List[i];
+                }
+            }
+            throw new KeyNotFoundException($"No item with ID {id} was found in the library");
         }
     }
 
@@ -271,13 +307,59 @@
     // - Include: ItemId, Title, BorrowDate, ReturnDate, BorrowerName
     // - Add an init-only property: LibraryLocation
 
+    public record BorrowRecord(
+        int ItemId,
+        string Title,
+        DateTime? BorrowDate,
+        DateTime? ReturnDate,
+        string BorrowerName)
+    {
+        public string LibraryLocation { get; init; } = "Main branch";
+    }
+
     // TODO (ADVANCED): Create an extension method for string
     // - Create a method ContainsIgnoreCase() that checks if a string contains
     //   another string, ignoring case sensitivity
 
+    public static class StringExtension
+    {
+        public static bool ContainsIgnoreCase(this string source, string value)
+        {
+            //this is better because it handles null safety
+            return source?.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
+            //or
+            // if (source == null)
+            // {
+            //     return source.Contains(value, StringComparison.OrdinalIgnoreCase);
+            // }
+        }
+    }
+
     // TODO (ADVANCED): Create a generic collection to avoid boxing/unboxing
     // - Create a class LibraryItemCollection<T> where T : LibraryItem
     // - Implement methods: Add(), GetItem(), Count property
+
+    public class LibraryItemCollection<T> where T : LibraryItem
+    {
+        private List<T> items = new List<T>();
+
+        public int Count => items.Count;
+
+        public void Add(T item)
+        {
+            items.Add(item);
+        }
+
+        public T GetItem(int index)
+        {
+            if (index < 0 || index > items.Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "INDEX IS OUT OF RANGE");
+            }
+
+            return items[index];
+        }
+    }
 
     // TODO (ADVANCED): Add ref parameter and ref return methods to the Library class
     // - UpdateItemTitle method using ref parameter
@@ -356,7 +438,6 @@
             // ======== ADVANCED FEATURES DEMONSTRATION ========
             // Uncomment and implement these sections for the advanced assignment
 
-            /*
             if (ShouldRunAdvancedFeatures())
             {
                 // Boxing/Unboxing performance comparison
@@ -381,6 +462,7 @@
                 {
                     sum1 += i;
                 }
+
                 stopwatch.Stop();
                 Console.WriteLine($"ArrayList time (with boxing): {stopwatch.ElapsedMilliseconds}ms");
 
@@ -396,6 +478,7 @@
                 {
                     sum2 += i;
                 }
+
                 stopwatch.Stop();
                 Console.WriteLine($"Generic List<T> time (no boxing): {stopwatch.ElapsedMilliseconds}ms");
 
@@ -485,7 +568,6 @@
                 bool contains = "Clean Code".ContainsIgnoreCase(searchTerm);
                 Console.WriteLine($"Does 'Clean Code' contain '{searchTerm}'? {contains}");
             }
-            */
         }
 
         static bool ShouldRunAdvancedFeatures()
