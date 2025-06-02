@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Diagnostics;
 
-namespace LibraryManagementSystem
-{
+namespace LibraryManagementSystem {
     // ======== BASIC ASSIGNMENT ========
 
     // TODO: Create the abstract base class LibraryItem with:
@@ -12,14 +11,12 @@ namespace LibraryManagementSystem
     // - Virtual method: CalculateLateReturnFee(int daysLate) that returns decimal
     //   with a basic implementation of daysLate * 0.50m
 
-    public abstract class LibraryItem
-    {
+    public abstract class LibraryItem {
         public string Id { get; set; }
         public string Title { get; set; }
         public string PublicationYear { get; set; }
 
-        protected LibraryItem(string id, string title, string publicationYear)
-        {
+        protected LibraryItem(string id, string title, string publicationYear) {
             this.Id = id;
             this.Title = title;
             this.PublicationYear = publicationYear;
@@ -27,8 +24,7 @@ namespace LibraryManagementSystem
 
         public abstract void DisplayInfo();
 
-        public virtual decimal CalculateLateReturnFee(int daysLate)
-        {
+        public virtual decimal CalculateLateReturnFee(int daysLate) {
             return daysLate * 0.5m;
         }
     }
@@ -37,8 +33,7 @@ namespace LibraryManagementSystem
     // - Properties: BorrowDate (DateTime?), ReturnDate (DateTime?), IsAvailable (bool)
     // - Methods: Borrow(), Return()
 
-    public interface IBorrowable
-    {
+    public interface IBorrowable {
         DateTime? BorrowDate { get; set; }
         DateTime? ReturnDate { get; set; }
         bool IsAvailable { get; set; }
@@ -52,8 +47,7 @@ namespace LibraryManagementSystem
     // - Implement all required methods from the base class and interface
     // - Override CalculateLateReturnFee to return daysLate * 0.75m
 
-    public class Book : LibraryItem, IBorrowable
-    {
+    public class Book : LibraryItem, IBorrowable {
         public string Author { get; set; }
         public int Pages { get; set; }
         public string Genre { get; set; }
@@ -61,14 +55,12 @@ namespace LibraryManagementSystem
         public DateTime? ReturnDate { get; set; }
         public bool IsAvailable { get; set; } = true;
 
-        public Book(int id, string title, int year, string author) : base(id.ToString(), title, year.ToString())
-        {
+        public Book(int id, string title, int year, string author) : base(id.ToString(), title, year.ToString()) {
             Author = author;
             IsAvailable = true;
         }
 
-        public override void DisplayInfo()
-        {
+        public override void DisplayInfo() {
             Console.WriteLine("*** BOOK INFORMATION ***");
             Console.WriteLine($"Title: {Title}");
             Console.WriteLine($"Author: {Author}");
@@ -77,47 +69,36 @@ namespace LibraryManagementSystem
             Console.WriteLine($"Is available: {IsAvailable}");
         }
 
-        public override decimal CalculateLateReturnFee(int daysLate)
-        {
+        public override decimal CalculateLateReturnFee(int daysLate) {
             return daysLate * 0.75m;
         }
 
-        public void Borrow()
-        {
-            if (IsAvailable)
-            {
+        public void Borrow() {
+            if (IsAvailable) {
                 BorrowDate = DateTime.Now;
                 ReturnDate = null;
                 IsAvailable = false;
                 Console.WriteLine($"Book {Title} has been borrowed successfully");
-            }
-            else
-            {
+            } else {
                 Console.WriteLine($"This book {Title} is not available for borrowing");
             }
         }
 
-        public void Return()
-        {
-            if (!IsAvailable)
-            {
+        public void Return() {
+            if (!IsAvailable) {
                 ReturnDate = DateTime.Now;
                 IsAvailable = true;
 
                 //calculate return fee
                 //assuming people can borrow an item for 2 weeks
-                if (BorrowDate.HasValue)
-                {
+                if (BorrowDate.HasValue) {
                     TimeSpan borrowedDuration = ReturnDate.Value - BorrowDate.Value;
                     int daysLate = Math.Max(0, (int)borrowedDuration.TotalDays - 14);
 
-                    if (daysLate > 0)
-                    {
+                    if (daysLate > 0) {
                         decimal returnFee = CalculateLateReturnFee(daysLate);
                         Console.WriteLine($"Late return fee for book {Title}: {returnFee}");
-                    }
-                    else
-                    {
+                    } else {
                         Console.WriteLine($"This book {Title} has been returned on time");
                     }
                 }
@@ -130,20 +111,17 @@ namespace LibraryManagementSystem
     // - Implement all required methods from the base class and interface
     // - Override CalculateLateReturnFee to return daysLate * 1.00m
 
-    public class DVD : LibraryItem, IBorrowable
-    {
+    public class DVD : LibraryItem, IBorrowable {
         public string Director { get; set; }
         public int Runtime { get; set; }
         public string AgeRating { get; set; }
 
         public DVD(int id, string title, int publicationYear, string director) : base(id.ToString(), title,
-            publicationYear.ToString())
-        {
+            publicationYear.ToString()) {
             Director = director;
         }
 
-        public override void DisplayInfo()
-        {
+        public override void DisplayInfo() {
             Console.WriteLine("*** BOOK INFORMATION ***");
             Console.WriteLine($"Title: {Title}");
             Console.WriteLine($"Director: {Director}");
@@ -156,47 +134,36 @@ namespace LibraryManagementSystem
         public DateTime? ReturnDate { get; set; }
         public bool IsAvailable { get; set; }
 
-        public void Borrow()
-        {
-            if (IsAvailable)
-            {
+        public void Borrow() {
+            if (IsAvailable) {
                 BorrowDate = DateTime.Now;
                 ReturnDate = null;
                 IsAvailable = false;
                 Console.WriteLine($"DVD {Title} has been borrowed successfully");
-            }
-            else
-            {
+            } else {
                 Console.WriteLine($"This DVD {Title} is not available for borrowing");
             }
         }
 
-        public override decimal CalculateLateReturnFee(int daysLate)
-        {
+        public override decimal CalculateLateReturnFee(int daysLate) {
             return daysLate * 1.0m;
         }
 
-        public void Return()
-        {
-            if (!IsAvailable)
-            {
+        public void Return() {
+            if (!IsAvailable) {
                 ReturnDate = DateTime.Now;
                 IsAvailable = true;
 
                 //calculate return fee
                 //assuming people can borrow an item for 2 weeks
-                if (BorrowDate.HasValue)
-                {
+                if (BorrowDate.HasValue) {
                     TimeSpan borrowedDuration = ReturnDate.Value - BorrowDate.Value;
                     int daysLate = Math.Max(0, (int)borrowedDuration.TotalDays - 14);
 
-                    if (daysLate > 0)
-                    {
+                    if (daysLate > 0) {
                         var returnFee = CalculateLateReturnFee(daysLate);
                         Console.WriteLine($"Late return fee for DVD {Title}: {returnFee}");
-                    }
-                    else
-                    {
+                    } else {
                         Console.WriteLine($"This DVD {Title} has been returned on time");
                     }
                 }
@@ -209,19 +176,16 @@ namespace LibraryManagementSystem
     // - Implement all required methods from the base class
     // - Magazines don't need to implement IBorrowable (they typically can't be borrowed)
 
-    public class Magazine : LibraryItem
-    {
+    public class Magazine : LibraryItem {
         public int IssueNumber { get; set; }
         public string Publisher { get; set; }
 
         public Magazine(int id, string title, int publicationYear, int issueNumber) : base(id.ToString(), title,
-            publicationYear.ToString())
-        {
+            publicationYear.ToString()) {
             IssueNumber = issueNumber;
         }
 
-        public override void DisplayInfo()
-        {
+        public override void DisplayInfo() {
             Console.WriteLine("*** MAGAZINE INFORMATION ***");
             Console.WriteLine($"Title: {Title}");
             Console.WriteLine($"Publisher: {Publisher}");
@@ -234,17 +198,14 @@ namespace LibraryManagementSystem
     // - A list to store LibraryItems
     // - Methods: AddItem(), SearchByTitle(), DisplayAllItems()
 
-    public class Library
-    {
+    public class Library {
         public List<LibraryItem> List = new List<LibraryItem>();
 
-        public void AddItem(LibraryItem item)
-        {
+        public void AddItem(LibraryItem item) {
             List.Add(item);
         }
 
-        public LibraryItem SearchByTitle(string title)
-        {
+        public LibraryItem SearchByTitle(string title) {
             //return the first element that satisfies the condition or the default value if nothing is found
             //the default value in this case is null
             //null is catched later in the main method
@@ -253,17 +214,14 @@ namespace LibraryManagementSystem
                    throw new InvalidOperationException();
         }
 
-        public void DisplayAllItems()
-        {
+        public void DisplayAllItems() {
             Console.WriteLine("============ LIBRARY INVENTORY ============");
-            if (List.Count == 0)
-            {
+            if (List.Count == 0) {
                 Console.WriteLine("THERE ARE NOTHING IN THE LIBRARY");
                 return;
             }
 
-            foreach (var items in List)
-            {
+            foreach (var items in List) {
                 items.DisplayInfo();
                 Console.WriteLine("---------------------------------------");
             }
@@ -273,11 +231,9 @@ namespace LibraryManagementSystem
         // - UpdateItemTitle method using ref parameter
         // - GetItemReference method with ref return
 
-        public bool UpdateItemTitle(int id, ref string title)
-        {
+        public bool UpdateItemTitle(int id, ref string title) {
             LibraryItem item = List.FirstOrDefault(item => item.Id == id.ToString());
-            if (item != null)
-            {
+            if (item != null) {
                 item.Title = title;
                 return true;
             }
@@ -286,13 +242,10 @@ namespace LibraryManagementSystem
         }
 
 
-        public ref LibraryItem GetItemReference(int id)
-        {
-            for (int i = 0; i < List.Count; i++)
-            {
+        public ref LibraryItem GetItemReference(int id) {
+            for (int i = 0; i < List.Count; i++) {
                 // Check if we found the item with the matching ID
-                if (List[i].Id == id.ToString())
-                {
+                if (List[i].Id == id.ToString()) {
                     // Get a reference to the item at index i
                     return ref List[i];
                 }
@@ -312,8 +265,7 @@ namespace LibraryManagementSystem
         string Title,
         DateTime? BorrowDate,
         DateTime? ReturnDate,
-        string BorrowerName)
-    {
+        string BorrowerName) {
         public string LibraryLocation { get; init; } = "Main branch";
     }
 
@@ -321,10 +273,8 @@ namespace LibraryManagementSystem
     // - Create a method ContainsIgnoreCase() that checks if a string contains
     //   another string, ignoring case sensitivity
 
-    public static class StringExtension
-    {
-        public static bool ContainsIgnoreCase(this string source, string value)
-        {
+    public static class StringExtension {
+        public static bool ContainsIgnoreCase(this string source, string value) {
             //this is better because it handles null safety
             return source?.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
             //or
@@ -339,21 +289,17 @@ namespace LibraryManagementSystem
     // - Create a class LibraryItemCollection<T> where T : LibraryItem
     // - Implement methods: Add(), GetItem(), Count property
 
-    public class LibraryItemCollection<T> where T : LibraryItem
-    {
+    public class LibraryItemCollection<T> where T : LibraryItem {
         private List<T> items = new List<T>();
 
         public int Count => items.Count;
 
-        public void Add(T item)
-        {
+        public void Add(T item) {
             items.Add(item);
         }
 
-        public T GetItem(int index)
-        {
-            if (index < 0 || index > items.Count)
-            {
+        public T GetItem(int index) {
+            if (index < 0 || index > items.Count) {
                 throw new ArgumentOutOfRangeException(nameof(index), "INDEX IS OUT OF RANGE");
             }
 
@@ -366,34 +312,28 @@ namespace LibraryManagementSystem
     // - GetItemReference method with ref return
 
 
-    class Program
-    {
-        static void Main()
-        {
+    class Program {
+        static void Main() {
             // Create library
             var library = new Library();
 
             // Add items
-            var book1 = new Book(1, "The Great Gatsby", 1925, "F. Scott Fitzgerald")
-            {
+            var book1 = new Book(1, "The Great Gatsby", 1925, "F. Scott Fitzgerald") {
                 Genre = "Classic Fiction",
                 Pages = 180
             };
 
-            var book2 = new Book(2, "Clean Code", 2008, "Robert C. Martin")
-            {
+            var book2 = new Book(2, "Clean Code", 2008, "Robert C. Martin") {
                 Genre = "Programming",
                 Pages = 464
             };
 
-            var dvd1 = new DVD(3, "Inception", 2010, "Christopher Nolan")
-            {
+            var dvd1 = new DVD(3, "Inception", 2010, "Christopher Nolan") {
                 Runtime = 148,
                 AgeRating = "PG-13"
             };
 
-            var magazine1 = new Magazine(4, "National Geographic", 2023, 56)
-            {
+            var magazine1 = new Magazine(4, "National Geographic", 2023, 56) {
                 Publisher = "National Geographic Partners"
             };
 
@@ -425,21 +365,17 @@ namespace LibraryManagementSystem
             // Search for an item
             Console.WriteLine("\n===== Search Demonstration =====");
             var foundItem = library.SearchByTitle("Clean");
-            if (foundItem != null)
-            {
+            if (foundItem != null) {
                 Console.WriteLine("Found item:");
                 foundItem.DisplayInfo();
-            }
-            else
-            {
+            } else {
                 Console.WriteLine("Item not found");
             }
 
             // ======== ADVANCED FEATURES DEMONSTRATION ========
             // Uncomment and implement these sections for the advanced assignment
 
-            if (ShouldRunAdvancedFeatures())
-            {
+            if (ShouldRunAdvancedFeatures()) {
                 // Boxing/Unboxing performance comparison
                 Console.WriteLine("\n===== ADVANCED: Boxing/Unboxing Performance =====");
 
@@ -452,14 +388,12 @@ namespace LibraryManagementSystem
 
                 // Measure ArrayList performance (with boxing)
                 var stopwatch = Stopwatch.StartNew();
-                for (int i = 0; i < iterations; i++)
-                {
+                for (int i = 0; i < iterations; i++) {
                     standardList.Add(i);
                 }
 
                 int sum1 = 0;
-                foreach (int i in standardList)
-                {
+                foreach (int i in standardList) {
                     sum1 += i;
                 }
 
@@ -468,14 +402,12 @@ namespace LibraryManagementSystem
 
                 // Measure generic List<T> performance (no boxing)
                 stopwatch.Restart();
-                for (int i = 0; i < iterations; i++)
-                {
+                for (int i = 0; i < iterations; i++) {
                     genericList.Add(i);
                 }
 
                 int sum2 = 0;
-                foreach (int i in genericList)
-                {
+                foreach (int i in genericList) {
                     sum2 += i;
                 }
 
@@ -499,8 +431,7 @@ namespace LibraryManagementSystem
                 var item = library.SearchByTitle("Clean");
 
                 // Example pattern matching with switch expression
-                string description = item switch
-                {
+                string description = item switch {
                     Book b when b.Pages > 400 => $"Long book: {b.Title} with {b.Pages} pages",
                     Book b => $"Book: {b.Title} by {b.Author}",
                     DVD d => $"DVD: {d.Title} directed by {d.Director}",
@@ -514,21 +445,17 @@ namespace LibraryManagementSystem
                 // Ref returns demonstration
                 Console.WriteLine("\n===== ADVANCED: Ref Returns =====");
 
-                try
-                {
+                try {
                     ref var itemRef = ref library.GetItemReference(1);
                     Console.WriteLine($"Before modification: {itemRef.Title}");
                     itemRef.Title += " (Modified)";
                     Console.WriteLine($"After modification: {itemRef.Title}");
 
                     string title = "New Title";
-                    if (library.UpdateItemTitle(2, ref title))
-                    {
+                    if (library.UpdateItemTitle(2, ref title)) {
                         Console.WriteLine($"Updated title from '{title}' to 'New Title'");
                     }
-                }
-                catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     Console.WriteLine($"Error: {ex.Message}");
                 }
 
@@ -551,8 +478,7 @@ namespace LibraryManagementSystem
                     "The Great Gatsby",
                     DateTime.Now.AddDays(-7),
                     null,
-                    "John Smith")
-                {
+                    "John Smith") {
                     LibraryLocation = "Main Branch"
                 };
 
@@ -570,8 +496,7 @@ namespace LibraryManagementSystem
             }
         }
 
-        static bool ShouldRunAdvancedFeatures()
-        {
+        static bool ShouldRunAdvancedFeatures() {
             Console.WriteLine("\nWould you like to run the advanced features? (y/n)");
             return Console.ReadLine()?.ToLower() == "y";
         }
