@@ -1,0 +1,5 @@
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Generic\obj\Debug\net8.0\Generic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Generic\obj\Debug\net8.0\Generic.AssemblyInfoInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Generic\obj\Debug\net8.0\Generic.AssemblyInfo.cs
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Generic\obj\Debug\net8.0\Generic.csproj.CoreCompileInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\Generic\obj\Debug\net8.0\Generic.sourcelink.json

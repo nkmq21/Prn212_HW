@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F009A3F0-BD05-4F6B-AEF6-0AD0332C6CDE}|FactoryPattern\\FactoryPattern.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\factorypattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F009A3F0-BD05-4F6B-AEF6-0AD0332C6CDE}|FactoryPattern\\FactoryPattern.csproj|solutionrelative:factorypattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\generic\\prn212\\05_design_patterns\\hw\\hw1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|solutionrelative:generic\\prn212\\05_design_patterns\\hw\\hw1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\generic\\prn212\\05_design_patterns\\hw\\hw3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|solutionrelative:generic\\prn212\\05_design_patterns\\hw\\hw3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\generic\\prn212\\05_design_patterns\\hw\\hw2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B0CA9E-C9AA-4BD1-9F8D-C9611E7ED832}|Generic\\Generic.csproj|solutionrelative:generic\\prn212\\05_design_patterns\\hw\\hw2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}|LibaryManagementSystem\\LibaryManagementSystem.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\libarymanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CE8329A-4F06-4CE7-AD0C-52739FCE9197}|LibaryManagementSystem\\LibaryManagementSystem.csproj|solutionrelative:libarymanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}|Prn212_HW\\Prn212_HW.csproj|c:\\users\\nkmq21\\riderprojects\\prn212_hw\\prn212_hw\\prn212_hw.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{28AB7FFA-7805-4F11-A0E7-9C3184FC5352}|Prn212_HW\\Prn212_HW.csproj|solutionrelative:prn212_hw\\prn212_hw.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\FactoryPattern\\Program.cs",
+              "RelativeDocumentMoniker": "FactoryPattern\\Program.cs",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\FactoryPattern\\Program.cs",
+              "RelativeToolTip": "FactoryPattern\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:40:25.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HW3.cs",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW3.cs",
+              "RelativeDocumentMoniker": "Generic\\prn212\\05_design_patterns\\HW\\HW3.cs",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW3.cs",
+              "RelativeToolTip": "Generic\\prn212\\05_design_patterns\\HW\\HW3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:24:18.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HW2.cs",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW2.cs",
+              "RelativeDocumentMoniker": "Generic\\prn212\\05_design_patterns\\HW\\HW2.cs",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW2.cs",
+              "RelativeToolTip": "Generic\\prn212\\05_design_patterns\\HW\\HW2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:24:15.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HW1.cs",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW1.cs",
+              "RelativeDocumentMoniker": "Generic\\prn212\\05_design_patterns\\HW\\HW1.cs",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Generic\\prn212\\05_design_patterns\\HW\\HW1.cs",
+              "RelativeToolTip": "Generic\\prn212\\05_design_patterns\\HW\\HW1.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAuwK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:24:11.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\LibaryManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "LibaryManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\LibaryManagementSystem\\Program.cs",
+              "RelativeToolTip": "LibaryManagementSystem\\Program.cs",
+              "ViewState": "AgIAAMkBAAAAAAAAAIAxwOMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T16:09:20.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Prn212_HW.csproj",
+              "DocumentMoniker": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Prn212_HW\\Prn212_HW.csproj",
+              "RelativeDocumentMoniker": "Prn212_HW\\Prn212_HW.csproj",
+              "ToolTip": "C:\\Users\\nkmq21\\RiderProjects\\Prn212_HW\\Prn212_HW\\Prn212_HW.csproj",
+              "RelativeToolTip": "Prn212_HW\\Prn212_HW.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-30T16:09:17.579Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
