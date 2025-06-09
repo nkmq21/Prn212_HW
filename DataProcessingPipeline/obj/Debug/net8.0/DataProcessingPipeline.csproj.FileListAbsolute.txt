@@ -1,0 +1,15 @@
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\bin\Debug\net8.0\DataProcessingPipeline.exe
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\bin\Debug\net8.0\DataProcessingPipeline.deps.json
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\bin\Debug\net8.0\DataProcessingPipeline.runtimeconfig.json
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\bin\Debug\net8.0\DataProcessingPipeline.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\bin\Debug\net8.0\DataProcessingPipeline.pdb
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.AssemblyInfoInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.AssemblyInfo.cs
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.csproj.CoreCompileInputs.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.sourcelink.json
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\refint\DataProcessingPipeline.dll
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.pdb
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\DataProcessingPipeline.genruntimeconfig.cache
+C:\Users\nkmq21\RiderProjects\Prn212_HW\DataProcessingPipeline\obj\Debug\net8.0\ref\DataProcessingPipeline.dll

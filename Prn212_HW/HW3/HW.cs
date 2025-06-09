@@ -290,7 +290,7 @@ namespace Prn212_HW.HW3
 
     class Program
     {
-        static void Main()
+        static void bob()
         {
             // Create library
             var library = new Library();
